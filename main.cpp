@@ -15,6 +15,11 @@ int main(){
         if(input[0] != '#')
             std::cout << "Please put # first when entering the color in hexadecimal format\n";
 
+        for(int i = 0; i < input.size(); i++){
+            if((input[i] >= '0' && input[i] <= '9') || (input[i] >= 'a' && input[i] <= 'f') || (input[i] >= 'A' && input[i] <= 'F'))
+                std::cout << "Please enter the color in valid hexadecimal format, which involves 0-9, a-f, A-F\n";
+        }
+
         
     }while( input.size() != RGB_HEX_LENGTH );
 
